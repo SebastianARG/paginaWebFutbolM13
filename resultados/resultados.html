@@ -1,166 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Últimos resultados</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: white;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+    font-family: Arial, sans-serif;
+    background-image: url('abc.jpg');
+    background-color: rgb(162, 160, 160);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            background-color: #3d3d3d;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(118, 115, 115);
+    opacity: 70%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
 
-        nav ul li {
-            width: 100px;
-            margin: 5px;
-            text-align: center;
-            background-color: #4d4d4d;
-            border-radius: 10px;
-            overflow: hidden;
-        }
+nav ul li {
+    width: 100px;
+    margin: 5px;
+    text-align: center;
+    background-color: grey;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-        nav ul li a {
-            display: block;
-            padding: 10px;
-            color: white;
-            text-decoration: none;
-            width: 100%;
-            height: 100%;
-        }
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
 
-        nav ul li a:hover {
-            background-color: #800080;
-        }
+nav ul li a:hover {
+    background-color: rgb(239, 166, 106);
+}
 
-        h1 {
-            margin-top: 20px;
-        }
+h1 {
+    margin-top: 20px;
+    color: black;
+}
 
-        .container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
 
-        .score-box {
-            background-color: #4d4d4d;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 10px;
-            width: 45%; /* Ocupa el 45% del ancho de la pantalla */
-            max-width: 600px; /* Tamaño máximo en pantallas grandes */
-            min-width: 300px; /* Tamaño mínimo en pantallas pequeñas */
-            box-sizing: border-box;
-        }
+.score-box {
+    background-color: rgb(239, 166, 106);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    width: calc(50% - 40px); /* Ajusta el ancho para que quepan 2 en fila */
+    box-sizing: border-box;
+    opacity: 90%;
+}
 
-        .score-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 2vw; /* Se adapta según el ancho de la pantalla */
-        }
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2vw;
+    color: black;
+}
 
-        .arrow, .diamond {
-            font-size: 2vw;
-            color: red;
-        }
+/* Asegura que los resultados tengan siempre el mismo tamaño */
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Fija un ancho */
+    height: 50px; /* Fija un alto */
+    border-radius: 50%; /* Para hacer el óvalo */
+    font-size: 1.5vw; /* Ajusta el tamaño de la fuente */
+    font-weight: bold;
+    color: white;
+    margin: 0 10px;
+}
 
-        .score {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-grow: 1; /* Hace que los elementos se expandan para llenar el espacio */
-            height: 50px;
-            border-radius: 25px; /* Bordes redondeados */
-            font-size: 2vw; /* Se adapta según el ancho de la pantalla */
-            font-weight: bold;
-            color: white;
-            margin: 0 10px; /* Margen entre los puntajes y los símbolos */
-        }
+.score.green {
+    background-color: #66ff66;
+    color: #1a1a1a;
+}
 
-        .score.green {
-            background-color: #66ff66;
-            color: #1a1a1a;
-        }
+.score.red {
+    background-color: #ff6666;
+}
 
-        .score.red {
-            background-color: #ff6666;
-        }
+.score.gray {
+    background-color: grey;
+}
 
-        @media (max-width: 768px) {
-            .score-box {
-                width: 100%; /* En pantallas más pequeñas, ocupa todo el ancho */
-            }
+.date {
+    margin-top: 10px;
+    font-size: 1.2vw;
+    color: black;
+}
 
-            .score {
-                height: 40px;
-                font-size: 4vw; /* Ajusta el tamaño de fuente en pantallas pequeñas */
-            }
-        }
+@media (max-width: 768px) {
+    .score-box {
+        width: 100%;
+    }
+
+    .score {
+        width: 40px;
+        height: 40px;
+        font-size: 4vw;
+    }
+}
+
     </style>
 </head>
+
 <body>
 
     <nav>
         <ul>
-            <li><a href="../main/index.html" target="_blank">menú</a></li>
-            <li><a href="../equipos/equipos.html" target="_blank">equipos</a></li>
-            <li><a href="../jugadores/jugadores.html" target="_blank">jugadores</a></li>
-            <li><a href="resultados.html" target="_blank">Últimos resultados</a></li>
+            <li><a href="../main/index.html">menú</a></li>
+            <li><a href="../equipos/equipos.html">equipos</a></li>
+            <li><a href="../jugadores/jugadores.html">jugadores</a></li>
+            <li><a href="resultados.html">Últimos resultados</a></li>
         </ul>
     </nav>
 
     <h1>Últimos resultados</h1>
 
-    <div class="container">
-        <div class="score-box">
-            <div class="score-container">
-                <span class="arrow">&#x25BC;</span>
-                <span class="score red">0</span>
-                <span class="score green">2</span>
-                <span class="diamond">&#9671;</span>
-            </div>
-        </div>
-        <div class="score-box">
-            <div class="score-container">
-                <span class="arrow">&#x25BC;</span>
-                <span class="score green">1</span>
-                <span class="score red">0</span>
-                <span class="diamond">&#9671;</span>
-            </div>
-        </div>
-        <div class="score-box">
-            <div class="score-container">
-                <span class="arrow">&#x25BC;</span>
-                <span class="score red">0</span>
-                <span class="score green">2</span>
-                <span class="diamond">&#9671;</span>
-            </div>
-        </div>
-        <div class="score-box">
-            <div class="score-container">
-                <span class="arrow">&#x25BC;</span>
-                <span class="score green">1</span>
-                <span class="score red">0</span>
-                <span class="diamond">&#9671;</span>
-            </div>
-        </div>
+    <div class="container" id="resultados-container">
     </div>
+    <script src="resultados.js"></script>
 
 </body>
+
 </html>
