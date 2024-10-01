@@ -29,19 +29,19 @@ async function fetchTeams() {
             teamName.innerText = team.name;
             
             // Lista de jugadores (placeholder, ya que la API no provee jugadores directamente)
-            const playersElement = document.createElement('div');
-            playersElement.classList.add('players');
-            playersElement.innerText = 'Jugadores: No disponibles en la API actual';
+           // const playersElement = document.createElement('div');
+            //playersElement.classList.add('players');
+            //playersElement.innerText = 'Jugadores: No disponibles en la API actual';
 
             // Agregar evento para mostrar/ocultar jugadores
             teamName.addEventListener('click', () => {
-                playersElement.classList.toggle('show');
+                //playersElement.classList.toggle('show');
             });
 
             // Añadir el equipo y jugadores al contenedor
             teamElement.appendChild(teamIcon);
             teamElement.appendChild(teamName);
-            teamElement.appendChild(playersElement);
+           // teamElement.appendChild(playersElement);
 
             teamList.appendChild(teamElement);
         });

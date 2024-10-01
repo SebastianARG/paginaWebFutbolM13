@@ -49,8 +49,48 @@ nav ul li a:hover {
 h1{
 
     text-align: left;
-    color: black;
+    color: white;
 }
+.teams-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: lightgrey;
+    background-image:  url('imagenes/fondo_equipos.png');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+#team-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.team-icon img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-left: 50px;
+    
+}
+
+.team-name {
+    flex-grow: 1;
+    background-color: orange;
+    padding: 25px;
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+    margin-right: 250px;
+    margin-left: 150px;
+}
+
+
     </style>
 </head>
 <body>
@@ -63,12 +103,16 @@ h1{
         </ul>
     </nav>
     <br><br>
-
-    <h1>Equipos</h1>
-    <br>
-    <table>
+    <div class="teams-container">
+        <h1>Equipos</h1><br>
         
-    </table>
+        <div id="team-list">
+            <!-- Los equipos y jugadores se mostrarán aquí -->
+        </div>
+    </div>
+    
+    <br>
+    <script src="prueba.js"></script>
     
 </body>
 </html>
