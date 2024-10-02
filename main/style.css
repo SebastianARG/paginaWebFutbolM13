@@ -37,6 +37,8 @@ nav ul {
 nav ul li {
     display: block;
     padding: 0.25em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li:hover {
@@ -58,19 +60,16 @@ nav ul li a {
     display: inline-block;
     min-width: 450px;
     min-height: 150px;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #F60;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
+
+.score-box,
 .team,
 .player-container {
+    color: #FFF;
     margin: 10px 0;
     padding: 10px;
     background-color: #F60;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -84,7 +83,6 @@ nav ul li a {
 .score-container,
 .team-icon,
 .player-name {
-    color: #FFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,7 +90,9 @@ nav ul li a {
 
 .score {
     padding: 5px 10px;
-    border-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    /* border-radius: 5px; */
 }
 
 .score.green {
