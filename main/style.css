@@ -6,6 +6,7 @@ body {
 }
 
 h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: #F60;
     color: #FFF;
     padding-right: 0.25em;
@@ -16,12 +17,14 @@ h1 {
     font-variant: small-caps;
 }
 
-nav {
-    display: block;
-    margin-top: -20px;
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-variant: small-caps;
 }
 
 nav ul {
+    margin-left: -30px;
+    margin-right: -30px;
     list-style: none;
     display: flex;
     background-color: #F60;
@@ -43,6 +46,70 @@ nav ul li:hover {
 nav ul li a {
     color: #FFF;
     text-decoration: none;
+}
+
+#resultados-container,
+#team-list,
+#player-list {
+    margin: 20px;
+}
+
+.score-box {
+    display: inline-block;
+    min-width: 450px;
+    min-height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #F60;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.team,
+.player-container {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #F60;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.score-box:hover,
+.team:hover,
+.player-container:hover {
+    background-color: #263bff;
+}
+
+.score-container,
+.team-icon,
+.player-name {
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.score.green {
+    color: #FFF;
+    background-color: #007a1d;
+}
+
+.score.red {
+    color: #FFF;
+    background-color: #d80000;
+}
+
+.team-icon img,
+.player-name img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 footer {
