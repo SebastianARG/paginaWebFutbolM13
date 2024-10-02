@@ -8,9 +8,17 @@ body {
 h1 {
     background-color: #F60;
     color: #FFF;
-    padding: 0.25em;
+    padding-right: 0.25em;
+    padding-left: 0.25em;
+    padding-top: 0.1cm;
+    padding-bottom: 0.1cm;
     font-style: italic;
     font-variant: small-caps;
+}
+
+nav{
+    display: block;
+    margin-top: 0px;
 }
 
 nav ul {
@@ -19,6 +27,7 @@ nav ul {
     background-color: #F60;
     padding: 0.25em;
     font-style: italic;
+    font-weight: bold;
     font-variant: small-caps;
     justify-content: space-around;
 }
