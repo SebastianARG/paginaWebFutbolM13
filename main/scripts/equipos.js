@@ -47,4 +47,5 @@ async function fetchTeams() {
 }
 
 // Ejecutar la función al cargar la página
-window.onload = fetchTeams;
+//window.onload = fetchTeams;
+fetchTeams();
