@@ -15,11 +15,15 @@ h1 {
     padding-bottom: 0.1cm;
     font-style: italic;
     font-variant: small-caps;
+    font-kerning: none;
+    font-stretch: expanded;
 }
 
 h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-variant: small-caps;
+    font-kerning: none;
+    font-stretch: expanded;
 }
 
 nav ul {
