@@ -1,0 +1,66 @@
+Equipos
+-----------------------------------------
+Método para conseguir todos los teams
+-------------
+
+fetch("https://v3.football.api-sports.io/teams", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "v3.football.api-sports.io",
+		"x-rapidapi-key": "d33cfa620d8e20f0fd5e91878d7b27d0"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.log(err);
+});
+
+Ejemplo de que sale:
+--------------------
+{
+  "get": "teams",
+  "parameters": {
+    "id": "33"
+  },
+  "errors": [],
+  "results": 1,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "team": {
+        "id": 33,
+        "name": "Manchester United",
+        "code": "MUN",
+        "country": "England",
+        "founded": 1878,
+        "national": false,
+        "logo": "https://media.api-sports.io/football/teams/33.png"
+      },
+      "venue": {
+        "id": 556,
+        "name": "Old Trafford",
+        "address": "Sir Matt Busby Way",
+        "city": "Manchester",
+        "capacity": 76212,
+        "surface": "grass",
+        "image": "https://media.api-sports.io/football/venues/556.png"
+      }
+    }
+  ]
+}
+-------------
+Recomendaciones
+-------------
+hacer un método get, y un método crear tabla que reciba por parámetro el response, que es un json y tienes que crear un bucle para recorrer cada equipo:
+response[i].team.name;
+response[i].team.country;
+response[i].team.logo;
+
+Recomendaciones finales:
+-----------------------
+crear un json del json que devuelve el método get para poder tener disponible todos los equipos cuando quieras sin depender de la API debido a las limitaciones de request
