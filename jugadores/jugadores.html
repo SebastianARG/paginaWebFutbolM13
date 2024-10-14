@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,100 +75,24 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="left-column">
-            <div class="player" data-player="messi">
-                Lionel Messi
-                <div class="stats-box">
-                    <h2>Estadísticas</h2>
-                    <p id="messi-stats"></p>
-                </div>
-            </div>
-            <div class="player" data-player="ronaldo">
-                Cristiano Ronaldo
-                <div class="stats-box">
-                    <h2>Estadísticas</h2>
-                    <p id="ronaldo-stats"></p>
-                </div>
-            </div>
-            <div class="player" data-player="neymar">
-                Neymar Jr
-                <div class="stats-box">
-                    <h2>Estadísticas</h2>
-                    <p id="neymar-stats"></p>
-                </div>
-            </div>
-            <div class="player" data-player="mbappe">
-                Kylian Mbappé
-                <div class="stats-box">
-                    <h2>Estadísticas</h2>
-                    <p id="mbappe-stats"></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1>Lista de Jugadores</h1>
+    <table id="playersTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Nacionalidad</th>
+                <th>Posición</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- El contenido de la tabla será generado por JavaScript -->
+        </tbody>
+    </table>
 
-    <script>
-        const stats = {
-            messi: {
-                name: 'Lionel Messi',
-                goals: 700,
-                assists: 300,
-                matches: 850,
-                team: 'Inter Miami',
-            },
-            ronaldo: {
-                name: 'Cristiano Ronaldo',
-                goals: 800,
-                assists: 250,
-                matches: 900,
-                team: 'Al Nassr',
-            },
-            neymar: {
-                name: 'Neymar Jr',
-                goals: 400,
-                assists: 200,
-                matches: 500,
-                team: 'Al Hilal',
-            },
-            mbappe: {
-                name: 'Kylian Mbappé',
-                goals: 300,
-                assists: 100,
-                matches: 350,
-                team: 'Paris Saint-Germain',
-            }
-        };
-
-        // Asignar estadísticas a cada jugador
-        document.getElementById('messi-stats').innerHTML = `
-            Goles: ${stats.messi.goals}<br>
-            Asistencias: ${stats.messi.assists}<br>
-            Partidos: ${stats.messi.matches}<br>
-            Equipo: ${stats.messi.team}
-        `;
-
-        document.getElementById('ronaldo-stats').innerHTML = `
-            Goles: ${stats.ronaldo.goals}<br>
-            Asistencias: ${stats.ronaldo.assists}<br>
-            Partidos: ${stats.ronaldo.matches}<br>
-            Equipo: ${stats.ronaldo.team}
-        `;
-
-        document.getElementById('neymar-stats').innerHTML = `
-            Goles: ${stats.neymar.goals}<br>
-            Asistencias: ${stats.neymar.assists}<br>
-            Partidos: ${stats.neymar.matches}<br>
-            Equipo: ${stats.neymar.team}
-        `;
-
-        document.getElementById('mbappe-stats').innerHTML = `
-            Goles: ${stats.mbappe.goals}<br>
-            Asistencias: ${stats.mbappe.assists}<br>
-            Partidos: ${stats.mbappe.matches}<br>
-            Equipo: ${stats.mbappe.team}
-        `;
-    </script>
+    <script src="Players-1.js"></script>
 </body>
+
 </html>
