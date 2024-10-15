@@ -1,31 +1,101 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipos</title>
-    <link rel="stylesheet" href="../main/style.css">
+    <title>Football Teams</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .team-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+        .team-list li {
+            position: relative;
+            width: 150px;
+            text-align: center;
+        }
+        .team-logo {
+            width: 100%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .team-logo:hover {
+            transform: scale(1.1);
+        }
+        .team-info {
+            position: absolute;
+            bottom: -110px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 10;
+        }
+        .team-logo:hover + .team-info {
+            opacity: 1;
+            visibility: visible;
+        }
+        .team-info h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .team-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Barra de navegación -->
-    <nav>
-        <ul>
-            <li><a href="../main/index.html">Menú</a></li>
-            <li><a href="../equipos/prueba.html">Equipos</a></li>
-            <li><a href="../jugadores/jugadores.html">Jugadores</a></li>
-            <li><a href="../resultados/resultados.html">Últimos Resultados</a></li>
-        </ul>
-    </nav>
+<h2>Football Teams</h2>
 
-    <!-- Contenedor principal para los equipos -->
-    <div class="teams-container">
-        <h1>Equipos</h1>
-        <div id="team-list">
-            <!-- Los equipos y jugadores se mostrarán aquí -->
-        </div>
-    </div>
+<ul class="team-list" id="teamList">
+    <!-- The teams will be inserted here by JavaScript -->
+</ul>
 
-    <script src="prueba.js"></script>
+<script>
+    // Función para cargar el archivo JSON
+    fetch('Equipos.json')
+        .then(response => response.json())
+        .then(data => {
+            const teamsData = data.teams;
+            const teamList = document.getElementById("teamList");
+
+            teamsData.forEach(team => {
+                const listItem = document.createElement("li");
+
+                listItem.innerHTML = `
+                    <img src="${team.team.logo}" alt="${team.team.name}" class="team-logo">
+                    <div class="team-info">
+                        <h3>${team.team.name}</h3>
+                        <p><strong>Country:</strong> ${team.team.country}</p>
+                        <p><strong>Founded:</strong> ${team.team.founded}</p>
+                        <p><strong>Venue:</strong> ${team.venue.name}</p>
+                        <p><strong>City:</strong> ${team.venue.city}</p>
+                        <p><strong>Capacity:</strong> ${team.venue.capacity}</p>
+                    </div>
+                `;
+
+                teamList.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error('Error fetching the JSON data:', error));
+</script>
+
 </body>
 </html>
