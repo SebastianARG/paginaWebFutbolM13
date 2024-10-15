@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos de Fútbol</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        img {
+            max-width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Equipos de Fútbol</h1>
+    <div id="team-table"></div> <!-- Aquí se insertará la tabla -->
+    <script>
+        const apiKey = "d33cfa620d8e20f0fd5e91878d7b27d0";
+        const apiHost = "v3.football.api-sports.io";
+
+        async function fetchTeams() {
+            try {
+                const response = await fetch(`https://${apiHost}/teams`, {
+                    method: "GET",
+                    headers: {
+                        "x-rapidapi-host": apiHost,
+                        "x-rapidapi-key": apiKey
+                    }
+                });
+
+                const data = await response.json();
+                if (data.response) {
+                    createTable(data.response);
+                    saveTeamsToJSON(data.response);
+                } else {
+                    console.error("No teams found.");
+                }
+            } catch (error) {
+                console.error("Error fetching teams:", error);
+            }
+        }
+
+        function createTable(teams) {
+            const table = document.createElement("table");
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>País</th>
+                        <th>Año de Fundación</th>
+                        <th>Logo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                ${teams.map(team => `
+                    <tr>
+                        <td>${team.team.name}</td>
+                        <td>${team.team.country}</td>
+                        <td>${team.team.founded}</td>
+                        <td><img src="${team.team.logo}" alt="${team.team.name}"></td>
+                    </tr>
+                `).join('')}
+                </tbody>
+            `;
+            document.getElementById("team-table").appendChild(table);
+          }
+
+        function saveTeamsToJSON(teams) {
+            const jsonTeams = JSON.stringify(teams, null, 2);
+            console.log("Equipos guardados en JSON:", jsonTeams);
+        }
+
+        // Llamada a la función
+        fetchTeams();
+    </script>
+</body>
+</html>
