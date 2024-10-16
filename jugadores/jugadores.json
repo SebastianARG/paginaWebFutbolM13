@@ -1,0 +1,204 @@
+{
+    "players": [
+      {
+        "player": {
+          "id": 2,
+          "name": "M. Hitz",
+          "firstname": "Marwin",
+          "lastname": "Hitz",
+          "age": 37,
+          "birth": {
+            "date": "1987-09-18",
+            "place": "St. Gallen",
+            "country": "Switzerland"
+          },
+          "nationality": "Switzerland",
+          "height": "194 cm",
+          "weight": "91 kg",
+          "number": 1,
+          "position": "Goalkeeper",
+          "photo": "https://media.api-sports.io/football/players/2.png"
+        }
+      },
+      {
+        "player": {
+          "id": 3,
+          "name": "E. Oelschlägel",
+          "firstname": "Eric Dirk",
+          "lastname": "Oelschlägel",
+          "age": 29,
+          "birth": {
+            "date": "1995-09-20",
+            "place": "Hoyerswerda",
+            "country": "Germany"
+          },
+          "nationality": "Germany",
+          "height": "193 cm",
+          "weight": "85 kg",
+          "number": 1,
+          "position": "Goalkeeper",
+          "photo": "https://media.api-sports.io/football/players/3.png"
+        }
+      },
+      {
+        "player": {
+          "id": 4,
+          "name": "L. Unbehaun",
+          "firstname": "Luca",
+          "lastname": "Unbehaun",
+          "age": 23,
+          "birth": {
+            "date": "2001-02-27",
+            "place": "Bochum",
+            "country": "Germany"
+          },
+          "nationality": "Germany",
+          "height": "185 cm",
+          "weight": "82 kg",
+          "number": 1,
+          "position": "Goalkeeper",
+          "photo": "https://media.api-sports.io/football/players/4.png"
+        }
+      },
+      {
+        "player": {
+          "id": 5,
+          "name": "M. Akanji",
+          "firstname": "Manuel Obafemi",
+          "lastname": "Akanji",
+          "age": 29,
+          "birth": {
+            "date": "1995-07-19",
+            "place": "Neftenbach",
+            "country": "Switzerland"
+          },
+          "nationality": "Switzerland",
+          "height": "186 cm",
+          "weight": "91 kg",
+          "number": null,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/5.png"
+        }
+      },
+      {
+        "player": {
+          "id": 6,
+          "name": "L. Balerdi",
+          "firstname": "Leonardo Julián",
+          "lastname": "Balerdi Rosa",
+          "age": 25,
+          "birth": {
+            "date": "1999-01-26",
+            "place": "Villa Mercedes",
+            "country": "Argentina"
+          },
+          "nationality": "Argentina",
+          "height": "187 cm",
+          "weight": "85 kg",
+          "number": null,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/6.png"
+        }
+      },
+      {
+        "player": {
+          "id": 7,
+          "name": "A. Diallo",
+          "firstname": "Abdou-Lakhad",
+          "lastname": "Diallo",
+          "age": 28,
+          "birth": {
+            "date": "1996-05-04",
+            "place": "Tours",
+            "country": "France"
+          },
+          "nationality": "Senegal",
+          "height": "187 cm",
+          "weight": "79 kg",
+          "number": 22,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/7.png"
+        }
+      },
+      {
+        "player": {
+          "id": 8,
+          "name": "Raphaël Guerreiro",
+          "firstname": "Raphaël Adelino José",
+          "lastname": "Guerreiro",
+          "age": 30,
+          "birth": {
+            "date": "1993-12-22",
+            "place": "Le Blanc-Mesnil",
+            "country": "France"
+          },
+          "nationality": "Portugal",
+          "height": "170 cm",
+          "weight": "71 kg",
+          "number": null,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/8.png"
+        }
+      },
+      {
+        "player": {
+          "id": 9,
+          "name": "A. Hakimi",
+          "firstname": "Achraf",
+          "lastname": "Hakimi Mouh",
+          "age": 25,
+          "birth": {
+            "date": "1998-11-04",
+            "place": "Madrid",
+            "country": "Spain"
+          },
+          "nationality": "Morocco",
+          "height": "181 cm",
+          "weight": "73 kg",
+          "number": null,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/9.png"
+        }
+      },
+      {
+        "player": {
+          "id": 10,
+          "name": "Ł. Piszczek",
+          "firstname": "Łukasz",
+          "lastname": "Piszczek",
+          "age": 39,
+          "birth": {
+            "date": "1985-06-03",
+            "place": "Czechowice-Dziedzice",
+            "country": "Poland"
+          },
+          "nationality": "Poland",
+          "height": "184 cm",
+          "weight": "79 kg",
+          "number": null,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/10.png"
+        }
+      },
+      {
+        "player": {
+          "id": 11,
+          "name": "Marcel Schmelzer",
+          "firstname": "Marcel",
+          "lastname": "Schmelzer",
+          "age": 36,
+          "birth": {
+            "date": "1988-01-22",
+            "place": "Magdeburg",
+            "country": "Germany"
+          },
+          "nationality": "Germany",
+          "height": "180 cm",
+          "weight": "74 kg",
+          "number": null,
+          "position": "Defender",
+          "photo": "https://media.api-sports.io/football/players/11.png"
+        }
+      }
+    ]
+  }
