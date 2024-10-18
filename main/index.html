@@ -3,120 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados y Equipos</title>
-    <link rel="stylesheet" href="style.css"> <!-- Incluye tu archivo CSS aquí -->
-    <!--
-    <style>
-        /* Algunos estilos básicos para dar estructura */
-        body {
-            background-color: #2c2c2c;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        #menu, #resultados-container, #team-list, #player-list {
-            margin: 20px;
-        }
-        .score-box, .team, .player-container {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #3c3c3c;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .score-box:hover, .team:hover, .player-container:hover {
-            background-color: #505050;
-        }
-        .score-container, .team-icon, .player-name {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .score {
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        .score.green {
-            background-color: #28a745;
-        }
-        .score.red {
-            background-color: #dc3545;
-        }
-        .team-icon img, .player-name img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-        nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: rgb(118, 115, 115);
-    opacity: 70%;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-nav ul li {
-    width: 100px;
-    margin: 5px;
-    text-align: center;
-    background-color: grey;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-nav ul li a {
-    display: block;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-}
-
-nav ul li a:hover {
-    background-color: rgb(239, 166, 106);
-}
-    </style>
-    -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Menú de Navegación -->
-    <nav>
-        <ul>
-            <li><a href="../main/index.html">menú</a></li>
-            <li><a href="../equipos/prueba.html">equipos</a></li>
-            <li><a href="../jugadores/jugadores.html">jugadores</a></li>
-            <li><a href="../resultados/resultados.html">Últimos resultados</a></li>
-        </ul>
-    </nav>
+<!-- Menú de Navegación -->
+<nav>
+    <ul>
+        <li><a href="../main/index.html">menú</a></li>
+        <li><a href="../equipos/prueba.html">equipos</a></li>
+        <li><a href="../jugadores/jugadores.html">jugadores</a></li>
+        <li><a href="../resultados/resultados.html">Últimos resultados</a></li>
+    </ul>
+</nav>
+<!-- Contenedor de equipos -->
+<div class="preview-container" id="equipos-preview" onclick="redirectTo('../equipos/prueba.html')">
+    <h2>Football Teams</h2>
+    <img src="imagenes/equipos.png" alt="Equipos" class="full-width-image">
+</div>
 
-    <!-- Sección de Últimos Resultados -->
-    <div id="resultados-container">
-        <h2>Últimos Resultados</h2>
-        <!-- Aquí se mostrarán los resultados con el script -->
-    </div>
+<!-- Contenedor de jugadores -->
+<div class="preview-container" id="jugadores-preview" onclick="redirectTo('../jugadores/jugadores.html')">
+    <h2>Jugadores</h2>
+    <img src="imagenes/jugadores.png" alt="Jugadores" class="full-width-image">
+</div>
 
-    <!-- Sección de Equipos -->
-    <div id="team-list">
-        <h2>Equipos</h2>
-        <!-- Aquí se mostrarán los equipos con el script -->
-    </div>
+<script>
+    function redirectTo(url) {
+        window.location.href = url;
+    }
+</script>
 
-    <!-- Sección de Jugadores -->
-    <div id="player-list">
-        <h2>Jugadores</h2>
-        <!-- Aquí se mostrarán los jugadores con el script -->
-    </div>
-
-    <!-- Incluir los scripts -->
-    <script src="scripts/ultimosResultados.js"></script> <!-- Script de resultados -->
-    <script src="scripts/equipos.js"></script> <!-- Script de equipos -->
-    <script src="scripts/jugadores.js"></script> <!-- Script de jugadores -->
 </body>
 </html>
