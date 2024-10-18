@@ -1,4 +1,4 @@
-const apiKey = "5c6caf853a40c7ac8d393665918c43b0";
+const apiKey = "your_personal_key";
 const apiHost = "v3.football.api-sports.io";
 
 async function fetchTeams() {
