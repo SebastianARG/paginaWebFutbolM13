@@ -11,14 +11,14 @@ async function obtenerResultados20() {
     }
 }
 async function obtenerResultados() {
-  try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-      const resultados = data.matches.slice(-2); // Tomamos los últimos 2 partidos para el main
-      mostrarResultados(resultados);
-  } catch (error) {
-      console.error('Error al obtener los datos:', error);
-  }
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        const resultados = data.matches.slice(-2); // Tomamos los últimos 2 partidos para el main
+        mostrarResultados(resultados);
+    } catch (error) {
+        console.error('Error al obtener los datos:', error);
+    }
 }
 
 function mostrarResultados(resultados) {
